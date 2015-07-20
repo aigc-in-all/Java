@@ -1,19 +1,29 @@
 package com.demo;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+
 public class CopyOfDemo {
+
+    private static ScheduledExecutorService primaryScheduleExecutorService = Executors.newSingleThreadScheduledExecutor();
+    private static ScheduledFuture future;
 
     public static void main(String[] args) throws Exception {
 
-        String ss = "{\"n\":\"z\"}";
+        Runnable r = new Runnable() {
 
-        JacksonMapper mapper = new JacksonMapper(false);
+            @Override
+            public void run() {
+                System.out.println("hello1");
+            }
+        };
 
-//        Person p = new Person("zhangsan", 23, 100);
+        for (int i = 0; i < 10; i++) {
+            //
+        }
 
-//        String s = mapper.toJson(p);
-//        System.out.println(s);
-
-        Person p1 = mapper.fromJson(ss, Person.class);
-        System.out.println(p1);
+        future = primaryScheduleExecutorService.scheduleWithFixedDelay(r, 0, 2, TimeUnit.SECONDS);
     }
 }
