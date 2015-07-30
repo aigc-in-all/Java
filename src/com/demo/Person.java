@@ -5,8 +5,8 @@ public class Person {
     int age;
     int score;
 
-    public Person() {
-    }
+//    public Person() {
+//    }
 
     public Person(String name, int age, int score) {
         super();

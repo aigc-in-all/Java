@@ -3,7 +3,6 @@ package com.demo;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 
 public class CopyOfDemo {
 
@@ -11,19 +10,27 @@ public class CopyOfDemo {
     private static ScheduledFuture future;
 
     public static void main(String[] args) throws Exception {
+        String s = "hello";
+        int i = s.indexOf("#");
 
-        Runnable r = new Runnable() {
+        String channel;
+        if (i != -1) {
+            channel = s.substring(0, i).trim();
+        } else {
+            channel = s.trim();
+        }
+        System.out.println(channel);
 
-            @Override
-            public void run() {
-                System.out.println("hello1");
+    }
+
+    protected static String getSql(Object... args) {
+        StringBuilder sql = new StringBuilder();
+        for (Object arg : args) {
+            if (arg != null) {
+                sql.append(arg);
             }
-        };
-
-        for (int i = 0; i < 10; i++) {
-            //
         }
 
-        future = primaryScheduleExecutorService.scheduleWithFixedDelay(r, 0, 2, TimeUnit.SECONDS);
+        return sql.toString();
     }
 }
