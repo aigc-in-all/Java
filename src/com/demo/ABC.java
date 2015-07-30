@@ -1,12 +1,12 @@
 package com.demo;
 
-public class Demo1 implements Runnable {
+public class ABC implements Runnable {
 
     private String name;
     private Object prev;
     private Object self;
 
-    private Demo1(String name, Object prev, Object self) {
+    private ABC(String name, Object prev, Object self) {
         this.name = name;
         this.prev = prev;
         this.self = self;
@@ -43,9 +43,9 @@ public class Demo1 implements Runnable {
         Object a = new Object();
         Object b = new Object();
         Object c = new Object();
-        Demo1 pa = new Demo1("A", c, a);
-        Demo1 pb = new Demo1("B", a, b);
-        Demo1 pc = new Demo1("C", b, c);
+        ABC pa = new ABC("A", c, a);
+        ABC pb = new ABC("B", a, b);
+        ABC pc = new ABC("C", b, c);
 
         new Thread(pa).start();
         new Thread(pb).start();
