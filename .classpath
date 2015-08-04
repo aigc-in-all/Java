@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="C:/Users/HeQingbao/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/HeQingbao/.m2/repository/com/wumii/mobile-data/1.1-SNAPSHOT/mobile-data-1.1-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="C:/Users/HeQingbao/.m2/repository/com/wumii/utils/1.1-SNAPSHOT/utils-1.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="libs/commons-codec-1.10.jar" sourcepath="C:/Users/HeQingbao/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
