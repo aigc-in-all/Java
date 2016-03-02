@@ -1,34 +1,19 @@
 package com.demo;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class CopyOfDemo {
 
+    private static JacksonMapper mapper = new JacksonMapper(false, true);
+
     public static void main(String[] args) throws Exception {
-        List<Person> ps = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            ps.add(new Person("name", i, i));
-        }
 
-        List<Person> tmp = new ArrayList<>();
-        tmp.addAll(ps);
+        Person person = new Person("hello", "22");
+        String s = mapper.toJson(person);
 
-        ps.remove(new Person("name", 3, 3));
-//        ps.removeAll(tmp);
+        System.out.println(s);
 
-        System.out.println(ps);
-
+        System.out.println(mapper.toJson(s));
     }
 
-    protected static String getSql(Object... args) {
-        StringBuilder sql = new StringBuilder();
-        for (Object arg : args) {
-            if (arg != null) {
-                sql.append(arg);
-            }
-        }
-
-        return sql.toString();
-    }
 }

@@ -22,7 +22,7 @@ public class ABC implements Runnable {
                     count--;
 
                     try {
-                        Thread.sleep(3000);
+                        Thread.sleep(100);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
