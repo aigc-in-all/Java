@@ -3,7 +3,7 @@ package com.demo;
 import java.util.HashSet;
 
 
-public class CopyOfCopyOfDemo {
+public class Test1 {
 
     private static JacksonMapper mapper = new JacksonMapper(false, true);
 
