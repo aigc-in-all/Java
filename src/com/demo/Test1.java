@@ -5,14 +5,7 @@ import java.util.HashSet;
 
 public class Test1 {
 
-    private static JacksonMapper mapper = new JacksonMapper(false, true);
-
     public static void main(String[] args) throws Exception {
-
-//        byte result = (byte) 0xffeffefe;
-        System.out.println(2/(4<<1));
-        int result = ((0xfe2baf&0xf)|0xff) >> 2/(4<<1);
-        System.out.println(result);
 
         String a = "Marginle";
         String b = "Valaienie";
@@ -30,10 +23,6 @@ public class Test1 {
 
         h1.retainAll(h2);
         Character[] res = h1.toArray(new Character[0]);
-
-        String a1 = "hello world";
-        String a2 = "world";
-        System.out.println(a1.contains(a2));
     }
 
     private static class A {
@@ -53,8 +42,4 @@ public class Test1 {
     public String getDescription(String obj) {
         return "string";
     }
-
-//    public void getDescription(String obj) {
-//        return obj;
-//    }
 }
