@@ -1,6 +1,6 @@
 package com.demo;
 
-import org.codehaus.jackson.annotate.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DumpPerson {
     private String name;
