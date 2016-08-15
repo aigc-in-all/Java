@@ -3,11 +3,7 @@ package com.demo;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.demo.JacksonMapper;
-
 public class AndroidAutoVersionCode {
-
-    private static JacksonMapper mapper = new JacksonMapper(false, true);
 
     public static void main(String[] args) throws Exception {
 
